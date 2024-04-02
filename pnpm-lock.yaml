@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@xmzhou/rc-contextmenu':
+    specifier: ^0.1.0
+    version: 0.1.0(react-dom@18.2.0)(react@18.2.0)
   ahooks:
     specifier: ^3.7.11
     version: 3.7.11(react@18.2.0)
@@ -2997,6 +3000,18 @@ packages:
       '@webassemblyjs/ast': 1.12.1
       '@xtuc/long': 4.2.2
     dev: true
+
+  /@xmzhou/rc-contextmenu@0.1.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-HV3kpHXCqR4WexiUgbkhDEfxIWnTQP2TrALVV0tl2mtoTa1J5Ms1rZgDSuhkj0aRDmo/IILiM8cnBYQQXS3hkQ==}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      ahooks: 3.7.11(react@18.2.0)
+      classnames: 2.5.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /@xtuc/ieee754@1.2.0:
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -10275,7 +10290,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: true
 
   /react-error-boundary@4.0.13(react@18.2.0):
     resolution: {integrity: sha512-b6PwbdSv8XeOSYvjt8LpgpKrZ0yGdtZokYwkwV2wlcZbxgopHX/hgPl5VgpnoVOWd868n1hktM8Qm4b+02MiLQ==}
@@ -10893,7 +10907,6 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-    dev: true
 
   /schema-utils@3.3.0:
     resolution: {integrity: sha512-pN/yOAvcC+5rQ5nERGuwrjLlYvLTbCibnZ1I7B1LaiAz9BRBlE9GMgE/eqV30P7aJQUf7Ddimy/RsbYO/GrVGg==}
