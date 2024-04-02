@@ -9,6 +9,9 @@ npm install @xmzhou/rc-contextmenu
 * 如果需要监听快捷键响应，请确保设置了`children`的`tabIndex`或`children`可响应键盘事件
 * 目前功能键仅支持`command`，`option`, `shift`，如果更多请联系作者
 
+## 实例
+<code src="@/demo/index.tsx"></code>
+
 ## API
 ``` typescript
 export interface RC_CONTEXT_MENU_API {

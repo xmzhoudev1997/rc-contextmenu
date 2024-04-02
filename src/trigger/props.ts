@@ -1,16 +1,5 @@
-## 安装
-```shell
-npm install @xmzhou/rc-contextmenu
-```
-## 说明
-* <font color="red"> 暂不支持菜单项嵌套</font>，未来会支持
-* 请确保`children`能够响应`onContextMenu`事件和`onScroll`事件
-* 组件只会监听第一层元素的`onScroll`用以关闭右击菜单，如果需要实现滚动即关闭，可以设置组件的key来间接实现
-* 如果需要监听快捷键响应，请确保设置了`children`的`tabIndex`或`children`可响应键盘事件
-* 目前功能键仅支持`command`，`option`, `shift`，如果更多请联系作者
+import { ReactElement, ReactNode } from "react";
 
-## API
-``` typescript
 export interface RC_CONTEXT_MENU_API {
     /**
      * 触发容器
@@ -87,4 +76,3 @@ export interface RC_CONTEXT_MENU_DIVIDER {
      */
     render?: (d: RC_CONTEXT_MENU, node: ReactNode) => ReactNode;
 }
-```
