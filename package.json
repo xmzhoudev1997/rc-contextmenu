@@ -1,6 +1,6 @@
 {
   "name": "@xmzhou/rc-contextmenu",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "一个基于React的右击菜单组件",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
