@@ -12,6 +12,7 @@ const SPECIAL_KEY_MAP = {
     command: 'metaKey',
     option: 'altKey',
     shift: 'shiftKey',
+    ctrl: 'ctrlKey',
 }
 
 export default (
@@ -20,12 +21,15 @@ export default (
     width: Required<RC_CONTEXT_MENU_API>['width'],
     onChange: Required<RC_CONTEXT_MENU_API>['onChange'],
     shortcut: Required<RC_CONTEXT_MENU_API>['shortcut'],
+    onVisibleChange: Required<RC_CONTEXT_MENU_API>['onVisibleChange'],
+    visible: RC_CONTEXT_MENU_API['visible'],
 ) => {
     const [state, setState] = useSetState<State>({
         left: 0,
         top: 0,
         show: false,
     });
+    const finalOpen = visible ?? state.show;
     const containerRef = useRef<HTMLUListElement>(null);
     const totalHeight = useMemo(() => {
         let height = 8;
@@ -56,8 +60,10 @@ export default (
             obj.top = y - totalHeight;
         }
         setState(obj);
+        onVisibleChange(true);
     }
     const handleContainerClose = () => {
+        onVisibleChange(false);
         setState({
             left: 0,
             top: 0,
@@ -65,6 +71,7 @@ export default (
         });
     }
     const handleContainerShortcut= (e: React.KeyboardEvent) => {
+        console.log(e);
         if(!shortcut) {
             return;
         }
@@ -88,17 +95,18 @@ export default (
         onKeyDown: handleContainerShortcut,
     });
     useEffect(() => {
-        if (!state.show) {
+        if (!finalOpen) {
             return;
         }
         if (containerRef.current) {
             containerRef.current.focus();
         }
-    }, [state.show])
+    }, [finalOpen])
     return {
         child,
         containerRef,
         ...state,
+        finalOpen,
         handleContainerClose,
     };
 }

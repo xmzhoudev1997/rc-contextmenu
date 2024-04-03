@@ -23,9 +23,17 @@ export interface RC_CONTEXT_MENU_API {
      */
     shortcut?: boolean;
     /**
+     * 右击菜单受控开闭
+     */
+    visible?: boolean;
+    /**
      * 触发点击事件
      */
     onChange?: (key: string, data: RC_CONTEXT_MENU) => void;
+    /**
+     * 右击菜单开闭触发
+     */
+    onVisibleChange?: (v: boolean) => void;
 }
 
 

@@ -10,16 +10,18 @@ const SPECIAL_KEY_MAP = {
     option: '⌥',
     shift: '⇧',
     enter: '↵',
+    ctrl: '^',
 }
 
 const Index: FC<RC_CONTEXT_MENU_API> = ({
     children, className, menu = [], width = 200, shortcut = false,
-    onChange = () => { },
+    visible,
+    onChange = () => { }, onVisibleChange = () => {},
 }) => {
     const {
-        left, top, show, child, containerRef,
+        left, top, finalOpen, child, containerRef,
         handleContainerClose,
-    } = useData(children, menu, width, onChange, shortcut);
+    } = useData(children, menu, width, onChange, shortcut, onVisibleChange, visible);
     const shortcutRender = (shortcutKeys: string[]) => {
         return shortcutKeys.map(d => {
             if (Object.keys(SPECIAL_KEY_MAP).includes(d.toLowerCase())) {
@@ -43,7 +45,7 @@ const Index: FC<RC_CONTEXT_MENU_API> = ({
                     left,
                     top,
                     width,
-                    display: show ? 'block' : 'none'
+                    display: finalOpen ? 'block' : 'none'
                 }}
                 onBlur={handleContainerClose}
                 onContextMenu={e => e.preventDefault()}
