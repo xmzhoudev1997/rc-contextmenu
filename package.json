@@ -77,7 +77,7 @@
     "stylelint": "^14.9.1"
   },
   "dependencies": {
-    "@xmzhou/rc-contextmenu": "^0.1.0",
+    "@xmzhou/rc-contextmenu": "^0.1.2",
     "ahooks": "^3.7.11",
     "classnames": "^2.5.1"
   }

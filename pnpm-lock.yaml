@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@xmzhou/rc-contextmenu':
-    specifier: ^0.1.0
-    version: 0.1.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^0.1.2
+    version: 0.1.2(react-dom@18.2.0)(react@18.2.0)
   ahooks:
     specifier: ^3.7.11
     version: 3.7.11(react@18.2.0)
@@ -3001,8 +3001,8 @@ packages:
       '@xtuc/long': 4.2.2
     dev: true
 
-  /@xmzhou/rc-contextmenu@0.1.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-HV3kpHXCqR4WexiUgbkhDEfxIWnTQP2TrALVV0tl2mtoTa1J5Ms1rZgDSuhkj0aRDmo/IILiM8cnBYQQXS3hkQ==}
+  /@xmzhou/rc-contextmenu@0.1.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-uW1W6aKF2cfpC4Nc+XkuaNwBmfWd0y2bOwKJSX+x+zDuipNyo09yxYHUvg7P/fTQCUogAWz4nVDt5sza4h+oRQ==}
     peerDependencies:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
